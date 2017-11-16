@@ -29,6 +29,6 @@
     "prop-types": "15.5.10",
     "react-native-gesture-responder": "0.1.1",
     "react-native-progress": "^3.2.0",
-    "@applications-developer/react-native-transformable-image": "0.1.1"
+    "react-native-transformable-image": "git+https://github.com/dondoko-susumu/react-native-transformable-image"
   }
 }
