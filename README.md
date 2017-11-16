@@ -18,11 +18,14 @@ or ```npm install react-native-photo-browser@https://github.com/ksti/react-nativ
 
 | Prop | Type | Description | Default |
 |---|---|---|---|
+|**`style`**|Style|Overrides default container style.|`null`|
 |**`mediaList`**|Array\<Media\>|List of [media objects](#media-object) to display.|`[]`|
 |**`initialIndex`**|Number|Sets the visible photo initially.|`0`|
 |**`alwaysShowControls`**|Boolean|Allows to control whether the bars and controls are always visible or whether they fade away to show the photo full.|`false`|
 |**`displayActionButton`**|Boolean|Show action button to allow sharing, copying, etc.|`false`|
 |**`displayNavArrows`**|Boolean|Whether to display left and right nav arrows on bottom toolbar.|`false`|
+|**`alwaysDisplayStatusBar`**|Boolean|Whether to display the OS Status Bar.|`false`|
+|**`displayTopBar`**|Boolean|Whether to display top bar.|`true`|
 |**`enableGrid`**|Boolean|Whether to allow the viewing of all the photo thumbnails on a grid.|`true`|
 |**`startOnGrid`**|Boolean|Whether to start on the grid of thumbnails instead of the first photo.|`false`|
 |**`displaySelectionButtons`**|Boolean|Whether selection buttons are shown on each image.|`false`|
@@ -31,6 +34,10 @@ or ```npm install react-native-photo-browser@https://github.com/ksti/react-nativ
 |**`onActionButton`**|Function|Called when action button is pressed for a photo. Your application should handle sharing process, please see [Sharing](#sharing) section for more information. If you don't provide this method, action button tap event will simply be ignored.|`(media, index) => {}`|
 |**`onBack`**|Function|Called when back button is tapped.|`() => {}`|
 |**`itemPerRow`**|Number|Sets images amount in grid row.|`3`|
+|**`onPhotoLongPress`**|Function|Called when a long press trigged on a photo.|`() => {}`|
+|**`delayPhotoLongPress`**|Number|The long press delay in `ms`.|`1000`|
+|**`square`**|Boolean|Displays the thumbnails as squares(same width, height).|`false`|
+|**`gridOffset`**|Number|Offset the width of the grid from the screen width.|`0`|
 
 ### Media Object
 
@@ -121,7 +128,7 @@ _onTopRight = (currentMedia, currentIndex, gallery) => {
 
 #### Android
 
-Built-in [ProgressBarAndroid](https://facebook.github.io/react-native/docs/progressbarandroid.html) component is used for Android. Any additional configuration is not needed.
+Built-in [ActivityIndicator](https://facebook.github.io/react-native/docs/activityindicator.html) component is used for Android. Any additional configuration is not needed.
 
 #### iOS
 
