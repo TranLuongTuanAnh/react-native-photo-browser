@@ -25,7 +25,7 @@
   "author": "Halil Bilir <hbilir@gmail.com>",
   "homepage": "https://github.com/halilb/react-native-photo-browser#readme",
   "dependencies": {
-    "@ldn0x7dc/react-native-view-pager": "https://github.com/ksti/react-native-view-pager",
+    "@ldn0x7dc/react-native-view-pager": "git+https://github.com/dondoko-susumu/react-native-view-pager",
     "prop-types": "15.5.10",
     "react-native-gesture-responder": "0.1.1",
     "react-native-progress": "^3.2.0",
