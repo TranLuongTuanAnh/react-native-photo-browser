@@ -7,7 +7,6 @@ import React, { Component } from 'react';
 import {
   ActionSheetIOS,
   CameraRoll,
-  ListView,
   StyleSheet,
   Navigator,
   Text,
@@ -16,6 +15,7 @@ import {
   View,
   Platform,
 } from 'react-native';
+import ListView from 'deprecated-react-native-listview';
 
 import PhotoBrowser from 'react-native-photo-browser';
 
@@ -120,12 +120,12 @@ export default class PhotoBrowserExample extends Component {
   _renderTopRightView() {
     return (
       <View style={{marginTop: 16, marginRight: 8, alignItems: 'center'}}>
-        <Image 
+        <Image
           style={{width: 24, height: 24}}
-          source={require('./media/ic_delete.png')} 
+          source={require('./media/ic_delete.png')}
         />
       </View>
-      
+
     );
   }
 
