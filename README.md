@@ -1,5 +1,6 @@
 # React Native Photo Browser
 
+### Information
 A full screen image gallery with captions, selections and grid view support for react-native. Layout and API design are inspired by great [MWPhotoBrowser](https://github.com/mwaterfall/MWPhotoBrowser) library.
 
 The component has both iOS and Android support.
@@ -38,6 +39,7 @@ or ```npm install react-native-photo-browser@https://github.com/ksti/react-nativ
 |**`delayPhotoLongPress`**|Number|The long press delay in `ms`.|`1000`|
 |**`square`**|Boolean|Displays the thumbnails as squares(same width, height).|`false`|
 |**`gridOffset`**|Number|Offset the width of the grid from the screen width.|`0`|
+|**`customTitle`**|Function|Custom title in full screen mode.|`(index, rowCount) => { return '' }`|
 
 ### Media Object
 
@@ -45,6 +47,7 @@ or ```npm install react-native-photo-browser@https://github.com/ksti/react-nativ
 const media = {
   thumb: '', // thumbnail version of the photo to be displayed in grid view. actual photo is used if thumb is not provided
   photo: '', // a remote photo or local media url
+  id: 1, // unique identifer for the photo; can be omitted if the `thumb`/`photo` will always be unique
   caption: '', // photo caption to be displayed
   selected: true, // set the photo selected initially(default is false)
 };
